@@ -1,41 +1,8 @@
-import './App.css'
+import '../../App.css'
 
-interface HeaderProps {
-  title: string;
-}
+import Header from '../Header';
+import Cinema from '../Cinema';
 
-const Header = (props: HeaderProps) => {
-  return (
-    <header>
-      <h1 className="animate__animated animate__bounce">{props.title}</h1>
-    </header>
-  );
-};
-interface CinemaProps {
-  name: string;
-  movies: Movie[];
-}
-interface Movie {
-  title: string;
-  director: string;
-}
-const Cinema = (props: CinemaProps) => {
-  return (
-    <div>
-      <h2>{props.name}</h2>
-      <ul>
-        {props.movies.map((movie, index) => (
-          <li key={index}>
-            <strong>{movie.title}</strong> - Réalisateur {" "}
-            {movie.director}
-          </li>
-        ))}
-      </ul>
-        
-      
-    </div>
-  );
-}
 
 const App = () => {
   const pageTitle = "Informations sur les films dans les cinémas";
